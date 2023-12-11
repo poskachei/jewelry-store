@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewelry store</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <div class="main__item">
+          <h1 class="main__title">Прикраси власного виробництва</h1>
+          <p class="main__text">Вироби створюються з любов'ю для&nbsp;кожного клієнта</p>
+          <a href="#cost" class="link">Зробити розрахунок та замовлення</a>
+        </div>
+        <div class="main__images">
+          <img src="/img/img1.jpg" class="img1" width="352" height="536" alt="" />
+          <img src="/img/img2.jpg" class="img2" width="233" height="318" alt="" />
+        </div>
+      </main>
+      <section class="products">
+        <h2 class="title-h2">Наші вироби</h2>
+        <div class="grid">
+          <div class="grid__cover">
+            <img src="/img/img3.jpg" alt="" />
+          </div>
+          <div class="grid__cover">
+            <img src="/img/img4.jpg" alt="" />
+          </div>
+          <div class="grid__cover">
+            <img src="/img/img5.jpg" alt="" />
+          </div>
+          <div class="grid__cover">
+            <img src="/img/img6.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <div class="cost" id="cost">
+        <div class="cost__title">
+          <svg class="circle" width="200" height="200" viewBox="0 0 200 200">
+            <path
+              id="circleShape"
+              class="circle__shape"
+              d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+              fill="none"
+            ></path>
+            <path
+              class="circle__arrow"
+              d="M 75 100 L 125 100 L 110  85 M 125 100 L 110 115"
+              fill="none"
+              stroke="#2b2024"
+              stroke-width="2"
+            ></path>
+            <text class="circle__text">
+              <textPath href="#circleShape">Розрахувати вартість</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="cost__calc">
+          <form class="form">
+            <p class="form__text" sel>Оберіть виріб:</p>
+            <select class="form__select" id="selectProduct">
+              <option value="0" selected disabled>Обрати зі списку</option>
+              <option value="1000">Браслет (1000 грн)</option>
+              <option value="800">Обручка (800 грн)</option>
+              <option value="900">Сережки (900 грн)</option>
+            </select>
+            <p class="form__text">Вкажіть кількість:</p>
+            <input class="form__input" id="quantityProduct" type="number" value="0" min="0" />
+            <button type="button" id="btnProduct" class="link">Розрахувати</button>
+          </form>
+          <div class="total" id="infoProduct" style="display: none">
+            <p class="total__price">Підсумок: <span id="priceProduct"></span> грн</p>
+            <p class="total__info">
+              Залиште заявку на пошті:
+              <a class="total__email" href="mailto:order@jewelery.com">order@jewelery.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
